@@ -134,7 +134,7 @@ function getViteConfigForPackage({ env, formats, external }) {
     build: {
       cssTarget: 'chrome61',
       lib: {
-        name: 'antdMobile',
+        name: 'uiMobile',
         entry: './lib/es/index.js',
         formats,
         fileName: format => `${name}.${format}${isProd ? '' : `.${env}`}.js`,
@@ -186,10 +186,10 @@ function umdWebpack() {
       webpackStream(
         {
           output: {
-            filename: 'antd-mobile.js',
+            filename: 'ui-mobile.js',
             library: {
               type: 'umd',
-              name: 'antdMobile',
+              name: 'uiMobile',
             },
           },
           mode: 'production',
@@ -274,8 +274,8 @@ function umdWebpack() {
 
 function copyUmd() {
   return gulp
-    .src(['lib/umd/antd-mobile.js'])
-    .pipe(rename('antd-mobile.compatible.umd.js'))
+    .src(['lib/umd/ui-mobile.js'])
+    .pipe(rename('ui-mobile.compatible.umd.js'))
     .pipe(gulp.dest('lib/bundle/'))
 }
 
