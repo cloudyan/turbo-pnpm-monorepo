@@ -1,15 +1,3 @@
-import React, { useLayoutEffect, useState } from 'react'
-import {
-  Space,
-  // Badge,
-  // Divider,
-  // JumboTabs,
-  // SearchBar,
-  // Slider,
-  // Switch,
-  // TabBar,
-} from 'ui-mobile'
-import { DemoBlock } from 'demos'
 import {
   AppOutline,
   MessageFill,
@@ -17,6 +5,11 @@ import {
   UnorderedListOutline,
   UserOutline,
 } from 'antd-mobile-icons'
+import { DemoBlock } from 'demos'
+import React, { useLayoutEffect, useState } from 'react'
+import {
+  Space,
+} from 'ui-mobile'
 
 export default () => {
   const [enableDarkMode, setEnableDarkMode] = useState(true)
