@@ -7,5 +7,16 @@ module.exports = {
       ts: true,
       compiler: 'webpack5',
     }]
-  ]
+  ],
+  // plugins: [
+  //   [
+  //     "import",
+  //     {
+  //       libraryName: "ui-mobile",
+  //       libraryDirectory: "",
+  //       style: true,
+  //     },
+  //     "ui-mobile",
+  //   ],
+  // ]
 }
