@@ -1,5 +1,5 @@
-import React from 'react'
 import type { FC, ReactNode } from 'react'
+import React from 'react'
 import styles from './index.less'
 
 interface Props {

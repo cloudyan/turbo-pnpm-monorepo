@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react'
-import Main from './components/Main'
-import Footer from './components/Footer'
 import 'antd/dist/antd.css'
+import React, { useEffect } from 'react'
+import Footer from './components/Footer'
+import Main from './components/Main'
 import './home-page.less'
 
 export default () => {

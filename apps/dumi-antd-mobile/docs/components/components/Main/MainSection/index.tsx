@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react'
 import { Button } from 'antd'
+import React, { useEffect, useState } from 'react'
 import Lottie from 'react-lottie'
 import { useTrans } from '../../../../hooks/useTrans'
 
-// import styles from './index.local.less'
-
-const styles = {}
+import './index.local.less'
 
 export default (props: { isWidthScreen: boolean }) => {
   const [startFireAnimation, setStartFireAnimation] = useState(false)
@@ -28,35 +26,35 @@ export default (props: { isWidthScreen: boolean }) => {
   }, [])
 
   return (
-    <div className={styles.mainSectionContainer}>
+    <div className="mainSectionContainer">
       <div>
-        <div className={styles.mainSectionTitle}>Ant Design Mobile</div>
-        <div className={styles.mainSectionDescription}>
+        <div className="mainSectionTitle">Ant Design Mobile</div>
+        <div className="mainSectionDescription">
           {trans(
             'Research the final experience of mobile',
             '探索移动端 Web 的极致体验'
           )}
         </div>
-        <div className={styles.mainSectionButtonAction}>
+        <div className="mainSectionButtonAction">
           <Button
             shape='round'
-            className={styles.buttonLeft}
+            className="buttonLeft"
             href={trans('/guide/quick-start', '/zh/guide/quick-start')}
           >
             {trans('Get Start', '开始使用')}
           </Button>
           <Button
             shape='round'
-            className={styles.buttonRight}
+            className="buttonRight"
             href={trans('/components', '/zh/components')}
           >
             {trans('Preview Online', '在线体验')}
           </Button>
         </div>
       </div>
-      <div className={styles.imageContainer}>
+      <div className="imageContainer">
         <div
-          className={styles.calendarImage}
+          className="calendarImage"
           id='calendarImage'
           style={{
             backgroundImage: trans.en
@@ -64,7 +62,7 @@ export default (props: { isWidthScreen: boolean }) => {
               : 'url(https://gw.alipayobjects.com/zos/bmw-prod/db18b4de-20f5-403e-9075-a413518934e3.svg)',
           }}
         >
-          <div className={styles.publishDayAnimation}>
+          <div className="publishDayAnimation">
             <Lottie
               options={{
                 loop: false,
@@ -88,7 +86,7 @@ export default (props: { isWidthScreen: boolean }) => {
             />
           </div>
         </div>
-        <div className={styles.resultImage} id='resultImage'>
+        <div className="resultImage" id='resultImage'>
           <Lottie
             options={{
               loop: false,
@@ -111,7 +109,7 @@ export default (props: { isWidthScreen: boolean }) => {
           />
         </div>
         <img
-          className={styles.staticImage}
+          className="staticImage"
           src={
             isWidthScreen
               ? 'https://gw.alipayobjects.com/mdn/rms_226d75/afts/img/A*kQ_zRK8YuGoAAAAAAAAAAAAAARQnAQ'

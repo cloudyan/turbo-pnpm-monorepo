@@ -17,9 +17,7 @@ import {
 } from './config'
 import { useTrans } from '../../../hooks/useTrans'
 
-// import styles from './index.local.less'
-
-const styles = {}
+import './index.local.less'
 
 export default () => {
   const [isWidthScreen, setIsWidthScreen] = useState(true)
@@ -59,32 +57,32 @@ export default () => {
   }, [containerSize?.width])
 
   return (
-    <div className={styles.mainContainer} ref={containerRef} id='mainContainer'>
-      <div className={styles.mainSection}>
+    <div className="mainContainer" ref={containerRef} id='mainContainer'>
+      <div className="mainSection">
         <MainSection isWidthScreen={isWidthScreen} />
       </div>
-      <div className={styles.contentSection}>
+      <div className="contentSection">
         {/* 高性能、可定制、原子化、流畅感 */}
-        <div className={styles.productIntroduce}>
+        <div className="productIntroduce">
           {trans(productIntroduceEn, productIntroduce).map(product => (
-            <div className={styles.productItem} key={product.title}>
+            <div className="productItem" key={product.title}>
               <img height={32} src={product.image} />
-              <div className={styles.productItemTitle}>{product.title}</div>
-              <div className={styles.productItemDescription}>
+              <div className="productItemTitle">{product.title}</div>
+              <div className="productItemDescription">
                 {product.description}
               </div>
             </div>
           ))}
         </div>
         {/* 设计语言与开发资源 */}
-        <div className={styles.productResource}>
-          <div className={styles.productResourceTitle}>
+        <div className="productResource">
+          <div className="productResourceTitle">
             {trans('Design and Development', '语言设计与开发资源')}
           </div>
-          <div className={styles.productResourceContent}>
+          <div className="productResourceContent">
             {getProductResource(isWidthScreen, trans.en).map(resource => (
               <Card
-                className={styles.productResourceCard}
+                className="productResourceCard"
                 bordered={false}
                 style={{
                   backgroundImage: `url(${resource.backgroundImage})`,
@@ -93,15 +91,15 @@ export default () => {
                 }}
                 key={resource.title}
               >
-                <div className={styles.productResourceCardContent}>
-                  <div className={styles.productResourceCardTitle}>
+                <div className="productResourceCardContent">
+                  <div className="productResourceCardTitle">
                     {resource.title}
                   </div>
-                  <div className={styles.productResourceCardDescription}>
+                  <div className="productResourceCardDescription">
                     {resource.description}
                   </div>
                   <Button
-                    className={styles.productResourceCardButton}
+                    className="productResourceCardButton"
                     type='primary'
                     shape='round'
                     target={resource.target}
@@ -114,7 +112,7 @@ export default () => {
             ))}
           </div>
           <Card
-            className={styles.productDesignValues}
+            className="productDesignValues"
             bordered={false}
             style={{
               backgroundImage: `url(${getProductDesignValuesBackgroundImage(
@@ -125,20 +123,20 @@ export default () => {
             }}
           >
             {trans(productDesignValuesEn, productDesignValues).map(value => (
-              <div key={value.title} className={styles.productDesignValueBody}>
-                <div className={styles.productDesignValuesContent}>
-                  <div className={styles.productDesignValuesTitle}>
+              <div key={value.title} className="productDesignValueBody">
+                <div className="productDesignValuesContent">
+                  <div className="productDesignValuesTitle">
                     {value.title}
                   </div>
-                  <div className={styles.productDesignValuesDescription}>
+                  <div className="productDesignValuesDescription">
                     {value.description}
                   </div>
                 </div>
-                <div className={styles.productDesignValuesIconContainer}>
+                <div className="productDesignValuesIconContainer">
                   {value.icons.map((icon, index) => (
                     <div
                       key={icon.text}
-                      className={styles.productDesignValuesIcon}
+                      className="productDesignValuesIcon"
                       id={`my_lottie_${index}`}
                     >
                       <Lottie
@@ -164,7 +162,7 @@ export default () => {
                         isStopped={!startAnimation[index]}
                         style={{ pointerEvents: 'none' }}
                       />
-                      <div className={styles.productDesignValuesIconText}>
+                      <div className="productDesignValuesIconText">
                         {icon.text}
                       </div>
                     </div>
@@ -175,12 +173,12 @@ export default () => {
           </Card>
         </div>
         {/* 新手指引 */}
-        <div className={styles.guides}>
-          <div className={styles.guidesTitle}>{trans('Guide', '新手指引')}</div>
-          <div className={styles.guidesContent}>
+        <div className="guides">
+          <div className="guidesTitle">{trans('Guide', '新手指引')}</div>
+          <div className="guidesContent">
             {getGuides(isWidthScreen, trans.en).map(guide => (
               <Card
-                className={styles.guideCard}
+                className="guideCard"
                 bordered={false}
                 style={{
                   backgroundImage: `url(${guide.backgroundImage})`,
@@ -189,12 +187,12 @@ export default () => {
                 }}
                 key={guide.title}
               >
-                <div className={styles.guideCardContent}>
-                  <div className={styles.guideCardTitle}>{guide.title}</div>
-                  <div className={styles.guideCardDescription}>
+                <div className="guideCardContent">
+                  <div className="guideCardTitle">{guide.title}</div>
+                  <div className="guideCardDescription">
                     {guide.description}
                   </div>
-                  <div className={styles.guideCardButton}>
+                  <div className="guideCardButton">
                     <a href={guide.buttonLink}>
                       {guide.buttonText}
                       <RightOutlined />
@@ -206,30 +204,30 @@ export default () => {
           </div>
         </div>
         {/* 精品资源 */}
-        <div className={styles.recommends}>
-          <div className={styles.recommendsTitle}>
+        <div className="recommends">
+          <div className="recommendsTitle">
             {trans('Resources', '精品资源')}
           </div>
-          <div className={styles.recommendsContent}>
+          <div className="recommendsContent">
             {getRecommends(trans.en).map(recommend => (
               <Card
-                className={styles.recommendCard}
+                className="recommendCard"
                 bordered={false}
                 hoverable={true}
                 key={recommend.title}
               >
                 <div
-                  className={styles.recommendCardBody}
+                  className="recommendCardBody"
                   onClick={() => window.open(recommend.link)}
                 >
-                  <div className={styles.recommendImage}>
+                  <div className="recommendImage">
                     <img src={recommend.image} width={50} />
                   </div>
-                  <div className={styles.recommendCardContent}>
-                    <div className={styles.recommendCardTitle}>
+                  <div className="recommendCardContent">
+                    <div className="recommendCardTitle">
                       {recommend.title}
                     </div>
-                    <div className={styles.recommendCardDescription}>
+                    <div className="recommendCardDescription">
                       {recommend.description}
                     </div>
                   </div>
@@ -240,13 +238,13 @@ export default () => {
         </div>
         {/* 谁在使用 */}
         {trans.zh && (
-          <div className={styles.users}>
-            <div className={styles.usersTitle}>谁在使用</div>
-            <div className={styles.usersContent}>
+          <div className="users">
+            <div className="usersTitle">谁在使用</div>
+            <div className="usersContent">
               {users.map(user => (
                 <img
                   key={user.name}
-                  className={styles.userImage}
+                  className="userImage"
                   src={user.image}
                 />
               ))}

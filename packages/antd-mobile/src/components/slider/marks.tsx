@@ -1,6 +1,6 @@
-import React from 'react'
-import type { FC, ReactNode } from 'react'
 import classNames from 'classnames'
+import type { FC, ReactNode } from 'react'
+import React from 'react'
 
 const classPrefix = `adm-slider-mark`
 

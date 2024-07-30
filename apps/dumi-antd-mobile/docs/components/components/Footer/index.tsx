@@ -1,18 +1,16 @@
-import React from 'react'
 import {
   AntDesignOutlined,
+  BugOutlined,
+  GithubOutlined,
+  IssuesCloseOutlined,
   MediumOutlined,
+  QuestionCircleOutlined,
   TwitterOutlined,
   ZhihuOutlined,
-  GithubOutlined,
-  BugOutlined,
-  IssuesCloseOutlined,
-  QuestionCircleOutlined,
 } from '@ant-design/icons'
+import React from 'react'
 import { useTrans } from '../../../hooks/useTrans'
-// import styles from './index.local.less'
-
-const styles = {}
+import './index.local.less'
 
 const getFooterData = (en: boolean) => [
   {
@@ -131,7 +129,7 @@ const getFooterData = (en: boolean) => [
           <img
             src='https://gw.alipayobjects.com/zos/rmsportal/XuVpGqBFxXplzvLjJBZB.svg'
             alt='yuque'
-            className={styles.columnItemCustomIcon}
+            className="columnItemCustomIcon"
           />
         ),
         title: en ? 'Lark' : '语雀',
@@ -145,7 +143,7 @@ const getFooterData = (en: boolean) => [
           <img
             src='https://gw.alipayobjects.com/zos/antfincdn/nc7Fc0XBg5/8a6844f5-a6ed-4630-9177-4fa5d0b7dd47.png'
             alt='AntV'
-            className={styles.columnItemCustomIcon}
+            className="columnItemCustomIcon"
           />
         ),
         title: 'AntV',
@@ -157,7 +155,7 @@ const getFooterData = (en: boolean) => [
           <img
             src='https://gw.alipayobjects.com/zos/antfincdn/v2%24rh7lqpu/82f338dd-b0a6-41bc-9a86-58aaa9df217b.png'
             alt='Egg'
-            className={styles.columnItemCustomIcon}
+            className="columnItemCustomIcon"
           />
         ),
         title: 'Egg',
@@ -171,7 +169,7 @@ const getFooterData = (en: boolean) => [
           <img
             src='https://gw.alipayobjects.com/zos/rmsportal/DMDOlAUhmktLyEODCMBR.ico'
             alt='kitchen'
-            className={styles.columnItemCustomIcon}
+            className="columnItemCustomIcon"
           />
         ),
         title: 'Kitchen',
@@ -183,7 +181,7 @@ const getFooterData = (en: boolean) => [
           <img
             src='https://gw.alipayobjects.com/zos/rmsportal/nBVXkrFdWHxbZlmMbsaH.svg'
             alt='xtech'
-            className={styles.columnItemCustomIcon}
+            className="columnItemCustomIcon"
           />
         ),
         title: en ? 'Ant Experience Technology' : '蚂蚁体验科技',
@@ -197,28 +195,28 @@ export default () => {
   const trans = useTrans()
 
   return (
-    <div className={styles.footerContainer}>
-      <div className={styles.footerBody}>
-        {getFooterData(trans.en).map((column, index) => (
-          <div className={styles.column} key={column.title}>
-            <div className={styles.columnTile}>{column.title}</div>
+    <div className="footerContainer">
+      <div className="footerBody">
+        {getFooterData(trans.en).map((column) => (
+          <div className="column" key={column.title}>
+            <div className="columnTile">{column.title}</div>
             <div>
               {column.items.map(
                 columnItem =>
                   columnItem && (
-                    <div className={styles.columnItem} key={columnItem.title}>
+                    <div className="columnItem" key={columnItem.title}>
                       <a
-                        className={styles.columnItemUrl}
+                        className="columnItemUrl"
                         href={columnItem.url}
                         target='_blank'
                         rel='noopener noreferrer'
                       >
-                        <span className={styles.columnItemIcon}>
+                        <span className="columnItemIcon">
                           {columnItem.icon}
                         </span>
                         {columnItem.title}
                       </a>
-                      <span className={styles.columnItemDescription}>
+                      <span className="columnItemDescription">
                         {columnItem.description
                           ? ' - ' + columnItem.description
                           : ''}
@@ -230,12 +228,13 @@ export default () => {
           </div>
         ))}
       </div>
-      <div className={styles.copyright}>
+      <div className="copyright">
         © 2024 Made with ❤ by
         <a
-          className={styles.copyrightLink}
+          className="copyrightLink"
           href='https://xtech.antfin.com'
           target='_blank'
+          rel='noopener noreferrer'
         >
           XTech
         </a>
