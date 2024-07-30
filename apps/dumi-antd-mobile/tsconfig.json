@@ -12,5 +12,5 @@
       "antd-mobile/*": ["src/*", "*"]
     }
   },
-  "include": ["config/config.ts", "src/**/*"]
+  "include": [".dumirc.ts", "src/**/*"]
 }

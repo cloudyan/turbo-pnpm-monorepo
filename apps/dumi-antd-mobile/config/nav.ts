@@ -1,17 +1,48 @@
 export const nav = {
+  // 多语言时配置对象，key 为语言名
+  'zh': [
+    {
+      title: '指南',
+      link: '/guide',
+    },
+    {
+      title: '组件',
+      link: '/components',
+    },
+    // {
+    //   title: '资源',
+    //   link: '/resources',
+    // },
+    // {
+    //   title: '国内镜像',
+    //   link: 'http://ant-design-mobile.antgroup.com',
+    // },
+    {
+      title: '发布日志',
+      link: 'https://github.com/ant-design/ant-design-mobile/releases',
+    },
+    // {
+    //   title: 'GitHub',
+    //   link: 'https://github.com/ant-design/ant-design-mobile',
+    // },
+  ],
   'en': [
     {
       title: 'Guide',
-      path: '/guide',
+      link: '/en/guide',
     },
     {
       title: 'Components',
-      path: '/components',
+      link: '/en/components',
     },
     {
-      title: 'Resources',
-      path: '/resources',
+      title: 'Changelog',
+      link: 'https://github.com/ant-design/ant-design-mobile/releases',
     },
+    // {
+    //   title: 'Resources',
+    //   link: '/en/resources',
+    // },
     // {
     //   title: 'Releases',
     //   path: 'https://github.com/ant-design/ant-design-mobile/releases',
@@ -21,30 +52,5 @@ export const nav = {
     //   path: 'https://github.com/ant-design/ant-design-mobile',
     // },
   ],
-  'zh': [
-    {
-      title: '指南',
-      path: '/zh/guide',
-    },
-    {
-      title: '组件',
-      path: '/zh/components',
-    },
-    {
-      title: '资源',
-      path: '/zh/resources',
-    },
-    {
-      title: '国内镜像',
-      path: 'http://ant-design-mobile.antgroup.com',
-    },
-    {
-      title: '发布日志',
-      path: 'https://github.com/ant-design/ant-design-mobile/releases',
-    },
-    {
-      title: 'GitHub',
-      path: 'https://github.com/ant-design/ant-design-mobile',
-    },
-  ],
+
 }

@@ -1,7 +1,7 @@
 import { defineConfig } from 'dumi';
-import { resolve, join } from 'path';
+import { resolve } from 'path';
+// import { sidebar } from './config/sidebar';
 import { nav } from './config/nav';
-import { sidebar } from './config/sidebar';
 
 console.log('__dirname', resolve(__dirname, '../../packages/antd-mobile/src'))
 
@@ -26,7 +26,7 @@ export default defineConfig({
     // menus 升级为 themeConfig.sidebar
     // navs 升级为 themeConfig.nav
     // sidebar,
-    // nav,
+    nav,
   },
   alias: {
     // dumi 2 不再感知 monorepo, 参见 https://d.umijs.org/guide/upgrading#%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E5%8D%87%E7%BA%A7
