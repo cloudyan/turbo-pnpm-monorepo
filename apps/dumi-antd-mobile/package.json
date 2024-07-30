@@ -51,7 +51,12 @@
     "access": "public"
   },
   "dependencies": {
-    "antd-mobile": "workspace:*"
+    "@ant-design/icons": "^4.8.0",
+    "ahooks": "^3.7.6",
+    "antd": "^4.24.9",
+    "antd-mobile": "workspace:*",
+    "antd-mobile-icons": "^0.3.0",
+    "react-lottie": "^1.2.3"
   },
   "peerDependencies": {
     "react": ">=16.9.0",
