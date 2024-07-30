@@ -19,7 +19,10 @@ export default defineConfig({
   },
   resolve: {
     // 这里使用 packages，而不是 tailPkgList，否则导致输出路由有问题
-    docDirs: ['docs', 'packages'],
+    docDirs: [
+      'docs',
+      // 'packages',
+    ],
   },
   // nav: [
   //   { title: '首页', path: '/' },
