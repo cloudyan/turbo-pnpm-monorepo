@@ -2,6 +2,7 @@
   "name": "my-turborepo",
   "private": true,
   "scripts": {
+    "dumi-antd-mobile": "pnpm --dir ./apps/dumi-antd-mobile dev",
     "build": "pnpm --dir ./packages/ui-mobile build",
     "dev": "turbo dev",
     "lint": "turbo lint",
